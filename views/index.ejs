@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= title %></title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+  <body>
+    <% include navigate.ejs %>
+    <h1><%= title %></h1>
+    <p>Welcome to <%= title %></p>
+
+    <%if (user !== null) { %>
+      <p> Subscribed as:
+          <label><%= user.username %></label>
+          <label><%= user.email %></label>
+      </p>
+    <% } %>
+  <footer style="bottom: auto">
+    <p>You have entered this site  times today</p>
+  </footer>
+  </body>
+</html>

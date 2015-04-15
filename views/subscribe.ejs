@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= title %></title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+  <body>
+    <% include navigate.ejs %>
+    <h1><%= title %></h1>
+
+    <!-- action = .ejs file to send -->
+    <form action="index" method="POST">
+      First name:<br>
+      <input type="text" name="username" value="">
+      <br>
+      Last name:<br>
+      <input type="text" name="email" value="">
+      <br><br>
+      <input type="submit" value="Subscribe">
+    </form>
+  </body>
+</html>

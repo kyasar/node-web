@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= title %></title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+  <body>
+    <% include navigate.ejs %>
+    <h1><%= title %></h1>
+    <%if (userlist !== null) { %>
+    <% for(var i=0; i<userlist.length; i++) { %>
+    <li>
+      <label>
+        <%= userlist[i].username %>
+      </label>
+      <a href='supplies/<%= userlist[i].username %>'>
+        <%= userlist[i].email %>
+      </a>
+    </li>
+    <% } %>
+    <% } %>
+  </body>
+</html>
